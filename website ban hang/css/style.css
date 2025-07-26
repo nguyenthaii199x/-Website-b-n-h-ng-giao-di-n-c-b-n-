@@ -1,0 +1,64 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+#carouselExampleIndicators {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+#navbarTogglerDemo01 > a {
+  color: chocolate;
+}
+
+#about-link:hover + #about-intro {
+  display: block;
+}
+
+ul li a {
+  color: rgb(68, 168, 135) !important;
+}
+span a {
+  text-decoration: none;
+}
+nav li a {
+  padding: 0 20px 0px 20px;
+  text-decoration: none;
+}
+
+/**/
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img-top {
+  height: 350px; /* Giữ chiều cao hình ảnh cố định */
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-height: 2.5em; /* Chiều cao cố định để các card đều nhau */
+}
+
+.card-text:nth-of-type(2) {
+  flex-grow: 1;
+  min-height: 4.5em; /* Giữ chiều cao mô tả ổn định */
+}

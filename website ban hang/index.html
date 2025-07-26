@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--bootrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <!-- bootrapjs -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- file CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Tiệm Bánh Mì</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header id="container" style="margin-top: 10px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="index.html">Tiệm Bánh Mì</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door"></i>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html"><i class="bi bi-box-seam"></i>Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="about-link" href="about.html"><i class="bi bi-info-circle"></i>About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"><i class="bi bi-cart"></i>Cart</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input id="input" class="form-control me-2" type="search" placeholder="tên sản phẩm" aria-label="search">
+            <button class="btn btn-outline-success" type="button" onclick="timkiem()">Seach</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- hinh anh trung bay -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imgs/hinh anh trung bay moi.jpg" class="d-block w-100" style="height: 500px; object-fit: cover;"
+            alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/hinh anh trung bay moi (2).jpg" class="d-block w-100" style="height: 500px; object-fit: cover;"
+            alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imgs/hinh anh trung bay moi .jpg" class="d-block w-100" style="height: 500px; object-fit: cover;"
+            alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+  <!-- content -->
+  <section id="content" style="margin-top: 5%;">
+    <div class="container py-5">
+      <h2 class="text-center mb-4 text-primary">Menu bánh mì</h2>
+
+      <div class="row g-4" style="width: 100%;">
+        <div class="col-md-4 product-card " data-name="Bánh Mì Pate" style="width: 33.3%;">
+          <div class="card h-100 border-warning d-flex flex-column">
+            <img src="imgs/Bánh mỳ thập cẩm.jpg" class="card-img-top" alt="Bánh mì 1">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">Bánh Mì Pate</h5>
+              <p class="card-text">Giá: <strong>25.000đ</strong></p>
+              <p class="card-text">Mô tả: Bánh mì giòn rụm kẹp pate thơm béo, đậm đà, ăn kèm dưa leo, đồ chua và rau
+                thơm.</p>
+              <button class="btn btn-danger mt-auto" onclick="themgiohang(this)"><i class=bi bi-card-plus></i>Mua
+                ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 product-card" data-name="Bánh Mì Gà Xé" style="width: 33.3%;">
+          <div class="card h-100 border-warning d-flex flex-column">
+            <img src="imgs/Bánh mỳ gà xé.jpg" class="card-img-top" alt="Bánh mì 2">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">Bánh Mì Gà Xé</h5>
+              <p class="card-text">Giá: <strong>22.000đ</strong></p>
+              <p class="card-text">Mô tả: Thịt gà xé tẩm gia vị đậm đà, ăn kèm rau thơm, đồ chua và sốt cay nhẹ, đầy
+                hương vị.</p>
+              <button class="btn btn-danger mt-auto" onclick="themgiohang(this)"><i class=bi bi-card-plus></i>Mua
+                ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 product-card" data-name="Bánh Mì Trứng" style="width: 33.3%;">
+          <div class="card h-100 border-warning d-flex flex-column">
+            <img src="imgs/Bánh mỳ trứng.jpg" class="card-img-top" alt="Bánh mì 3">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">Bánh Mì Trứng</h5>
+              <p class="card-text">Giá: <strong>18.000đ</strong></p>
+              <p class="card-text">Mô tả: Bánh mì kẹp trứng chiên vàng ươm, mềm béo, hòa quyện cùng rau sống và nước sốt
+                đặc trưng.</p>
+              <button class="btn btn-danger mt-auto" onclick="themgiohang(this)"><i class=bi bi-card-plus></i>Mua
+                ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 product-card" data-name="Bánh Mì đặc biệt" style="width: 33.3%;">
+          <div class="card h-100 border-warning d-flex flex-column">
+            <img src="imgs/Bánh mỳ đặc biệt.jpg" class="card-img-top" alt="Bánh mì 4">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">Bánh Mì đặc biệt</h5>
+              <p class="card-text">Giá: <strong>20.000đ</strong></p>
+              <p class="card-text">Mô tả: Tổng hòa nhân thập cẩm cao cấp: pate, trứng, jambon, chả, gà xé… đầy đặn,
+                chuẩn vị đặc biệt.</p>
+              <button class="btn btn-danger mt-auto" onclick="themgiohang(this)"><i class=bi bi-card-plus></i>Mua
+                ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 product-card" data-name="Bánh Mì dăm bông" style="width: 33.3%;">
+          <div class="card h-100 border-warning d-flex flex-column">
+            <img src="imgs/Bánh mỳ dăm bông.jpg" class="card-img-top" alt="Bánh mì 5">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">Bánh Mì dăm bông</h5>
+              <p class="card-text">Giá: <strong>23.000đ</strong></p>
+              <p class="card-text">Mô tả: Dăm bông thơm mềm, đậm vị, ăn kèm rau và sốt vừa miệng.</p>
+              <button class="btn btn-danger mt-auto" onclick="themgiohang(this)"><i class=bi bi-card-plus></i>Mua
+                ngay</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 product-card" data-name="Bánh Mì Gà Nướng" style="width: 33,3%;">
+          <div class="card h-100 border-warning d-flex flex-column">
+            <img src="imgs/Bánh mỳ gà nướng.jpg" class="card-img-top" alt="Bánh mì 6">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">Bánh Mì Gà Nướng</h5>
+              <p class="card-text">Giá: <strong>30.000đ</strong></p>
+              <p class="card-text">Mô tả: Thịt gà nướng than thơm lừng, đậm vị, kết hợp rau sống tươi ngon và sốt đặc
+                biệt, tạo nên hương vị khó quên.</p>
+              <button class="btn btn-danger mt-auto" onclick="themgiohang(this)"><i class=bi bi-card-plus></i>Mua
+                ngay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <nav class="bg-light py-2">
+    <ul class="d-flex justify-content-center list-unstyled">
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li>...</li>
+      <li><a href="#">Tiếp</a></li>
+    </ul>
+  </nav>
+  <!-- footer -->
+  <footer class="bg-secondary text-white text-center py-4 mt-5">
+    <div class="container">
+      <p>&copy; 2025 Tiệm Bánh Mì.</p>
+      <p>
+        <span>Email: <a href="#" class="text-white me-3">nguyenthai99@gmail.com</a></span>
+        <span>Liên hệ: <a href="#" class="text-white me-3">12234567</a></span>
+        <span>Facebook: <a href="#" class="text-white">Nguyenthaii</a></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- file JS -->
+  <script src="javaScript/product.js"></script>
+</body>
+
+</html>

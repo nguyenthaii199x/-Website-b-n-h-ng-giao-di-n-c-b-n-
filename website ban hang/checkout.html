@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--bootrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- bootrapjs -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- file CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- file js -->
+  <script src=""></script>
+
+  </style>
+  <title>Checkout</title>
+</head>
+
+<body>
+  <section class="container-fluid bg-light mt-0" id="content">
+    <div class="container mt-4 ">
+      <div class="bg-secondary">
+        <h2 class="text-center text-light mb-3 ">Thanh toán</h2>
+      </div>
+      <!--thong tin don hang-->
+      <div class="card">
+        <div class="card-header">
+          Thông tin đơn hàng
+        </div>
+        <ul class="list-group list-group-flush" id="cart-items">
+          <li class="list-group-item" id="cart-items">
+
+            <div>
+              Tổng tiền: <span id="tongtien">0</span> VND
+            </div>
+          </li>
+          <li class="list-group-item" id="cart-items">
+
+
+            <div>
+              Tổng tiền: <span id="tongtien">0</span> VND
+            </div>
+          </li>
+          <li class="list-group-item" id="cart-items">
+
+
+            <div>
+              Tổng tiền: <span id="tongtien">0</span> VND
+            </div>
+          </li>
+          <li class="list-group-item" id="cart-items">
+
+
+            <div>
+              Tổng tiền: <span id="tongtien">0</span> VND
+            </div>
+          </li>
+          <li class="list-group-item" id="cart-items">
+
+
+            <div>
+              Tổng tiền: <span id="tongtien">0</span> VND
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body text-end">
+        <strong>Tổng tiền: <span id="tongtien">0đ</span></strong>
+      </div>
+      <!-- Thông tin khách hàng -->
+      <div class="card mb-4">
+        <div class="card-header">Thông tin người nhận</div>
+        <div class="card-body">
+          <div class="mb-3">
+            <lable for="name" class="form-label">Họ tên</lable>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label form="phone" class="form-label">Số điện thoại</label>
+            <input type="tel" class="form-control" id="phone" required>
+          </div>
+          <div class="mb-3">
+            <label form="address" class="form-label">Địa chỉ giao hàng</label>
+            <input type="text" class="form-control" id="address" required>
+          </div>
+          <div class="mb-3">
+            <label form="note" class="form-label">Ghi chú</label>
+            <textarea type="text" class="form-control" id="note"></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- Phương thức thanh toán -->
+      <div class=" card mb-4">
+        <div class="card-header">Phương thức thanh toán</div>
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" id="cod" checked>
+            <label class="form-check-label" for="cod">Thanh toán khi nhận hàng (COD)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" id="bank" checked>
+            <label class="form-check-label" for="bank"> Chuyển khoản ngân hàng</label>
+          </div>
+        </div>
+      </div>
+      <!-- Nút xác nhận -->
+      <div class="text-end">
+        <button class="btn btn-danger mt-2 mb-5" onclick="xacnhanDonhang()">Xác nhận đặt hàng</button>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
